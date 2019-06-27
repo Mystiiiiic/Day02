@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>两列布局</title>
+    <style>
+        .product
+        {
+            background-color: cadetblue;
+            height: 100px;
+        }
+        .product::after
+        {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .product > div
+        {
+           height: 200px;
+           float: left
+        }
+        .product > div.left
+        {
+            background-color: coral;
+            width: 200px;
+        }
+        .product > div.right
+        {
+           background-color: darkgreen;
+           margin-left: 220px;
+        }
+    </style>
+</head>
+<body>
+    <div class="product">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
